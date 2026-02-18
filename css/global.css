@@ -1,0 +1,94 @@
+/* =========================================================
+   PPHS – Global Styles (Divi Code Module Pages)
+   Service Area: North Scottsdale + Pinnacle Peak area
+   ========================================================= */
+
+:root{
+  --pphs-ink:#0f172a;
+  --pphs-ink2:#111827;
+  --pphs-muted:#475569;
+  --pphs-line:#e2e8f0;
+  --pphs-soft:#f8fafc;
+  --pphs-white:#ffffff;
+  --pphs-accent:#16a34a; /* green accent */
+  --pphs-radius:18px;
+  --pphs-shadow:0 10px 30px rgba(2,6,23,.08);
+}
+
+.pphs-page, .pphs-page *{box-sizing:border-box;}
+.pphs-page{color:var(--pphs-ink); font-size:16px; line-height:1.65;}
+.pphs-wrap{max-width:1120px;margin:0 auto;padding:0 22px;}
+.pphs-section{padding:74px 0;}
+.pphs-hero{padding:94px 0;background:linear-gradient(180deg,var(--pphs-soft),#fff);}
+.pphs-kicker{letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--pphs-muted);}
+.pphs-h1{font-size:46px;line-height:1.05;margin:12px 0 14px;color:var(--pphs-ink2);}
+.pphs-h2{font-size:30px;line-height:1.15;margin:0 0 12px;color:var(--pphs-ink2);}
+.pphs-h3{font-size:18px;margin:0 0 8px;color:var(--pphs-ink2);}
+.pphs-sub{font-size:18px;max-width:840px;color:var(--pphs-muted);}
+
+.pphs-grid{display:grid;gap:18px;}
+@media(min-width:900px){
+  .pphs-grid-2{grid-template-columns:repeat(2,1fr);}
+  .pphs-grid-3{grid-template-columns:repeat(3,1fr);}
+  .pphs-grid-4{grid-template-columns:repeat(4,1fr);}
+}
+
+.pphs-card{
+  background:var(--pphs-white);
+  border:1px solid var(--pphs-line);
+  border-radius:var(--pphs-radius);
+  padding:22px;
+  box-shadow:var(--pphs-shadow);
+}
+.pphs-card p{margin:0;color:var(--pphs-muted);}
+
+.pphs-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.pphs-btn{
+  display:inline-block;
+  border-radius:999px;
+  padding:12px 18px;
+  font-weight:800;
+  text-decoration:none;
+  border:1px solid transparent;
+}
+.pphs-btn-primary{background:var(--pphs-ink2);color:#fff;}
+.pphs-btn-primary:hover{opacity:.92;}
+.pphs-btn-ghost{background:#fff;color:var(--pphs-ink2);border-color:var(--pphs-line);}
+.pphs-btn-ghost:hover{background:var(--pphs-soft);}
+
+.pphs-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
+.pphs-badge{font-size:13px;color:var(--pphs-muted);border:1px solid var(--pphs-line);padding:8px 12px;border-radius:999px;background:#fff;}
+
+.pphs-divider{border-top:1px solid var(--pphs-line);}
+
+.pphs-cta{
+  background:var(--pphs-ink2);
+  color:#fff;
+  border-radius:calc(var(--pphs-radius) + 4px);
+  padding:34px;
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:0 18px 50px rgba(2,6,23,.20);
+}
+.pphs-cta h2{color:#fff;margin:0 0 10px;}
+.pphs-cta p{color:rgba(255,255,255,.82);margin:0 0 18px;}
+.pphs-cta .pphs-btn-primary{background:#fff;color:var(--pphs-ink2);}
+
+.pphs-mini{font-size:14px;color:var(--pphs-muted);}
+
+.pphs-list{margin:0;padding-left:18px;color:var(--pphs-muted);line-height:1.75;}
+.pphs-note{
+  background:var(--pphs-soft);
+  border:1px solid var(--pphs-line);
+  border-radius:var(--pphs-radius);
+  padding:18px;
+  color:var(--pphs-muted);
+}
+
+.pphs-footer{
+  padding:40px 0;
+  border-top:1px solid var(--pphs-line);
+  background:#fff;
+  margin-top:30px;
+}
+.pphs-footer a{color:var(--pphs-ink2);text-decoration:none;border-bottom:1px solid rgba(15,23,42,.2);}
+.pphs-footer a:hover{border-bottom-color:rgba(15,23,42,.6);}
