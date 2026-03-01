@@ -12,10 +12,42 @@ const categoryColors = {
   'How to Work with a Home Watch Company': '#c48b47',
 }
 
+// Maps article ID to the guide(s) it belongs to
+const guideMembership = {
+  3:  [{ title: 'Arizona Climate Risks for Vacant Homes', slug: '/guides/arizona-climate-risks' }],
+  4:  [{ title: 'Arizona Climate Risks for Vacant Homes', slug: '/guides/arizona-climate-risks' }],
+  25: [{ title: 'Arizona Climate Risks for Vacant Homes', slug: '/guides/arizona-climate-risks' }],
+  26: [{ title: 'Arizona Climate Risks for Vacant Homes', slug: '/guides/arizona-climate-risks' }],
+  27: [{ title: 'Arizona Climate Risks for Vacant Homes', slug: '/guides/arizona-climate-risks' }],
+  28: [{ title: 'Arizona Climate Risks for Vacant Homes', slug: '/guides/arizona-climate-risks' }],
+  29: [{ title: 'Arizona Climate Risks for Vacant Homes', slug: '/guides/arizona-climate-risks' }],
+  14: [{ title: "Homeowner's Insurance and Vacant Homes", slug: '/guides/homeowners-insurance-vacant-homes' }],
+  19: [{ title: "Homeowner's Insurance and Vacant Homes", slug: '/guides/homeowners-insurance-vacant-homes' }],
+  20: [{ title: "Homeowner's Insurance and Vacant Homes", slug: '/guides/homeowners-insurance-vacant-homes' }],
+  21: [{ title: "Homeowner's Insurance and Vacant Homes", slug: '/guides/homeowners-insurance-vacant-homes' }],
+  22: [{ title: "Homeowner's Insurance and Vacant Homes", slug: '/guides/homeowners-insurance-vacant-homes' }],
+  9:  [{ title: 'What Is Professional Home Watch?', slug: '/guides/what-is-home-watch' }],
+  11: [{ title: 'What Is Professional Home Watch?', slug: '/guides/what-is-home-watch' }],
+  13: [{ title: 'What Is Professional Home Watch?', slug: '/guides/what-is-home-watch' }],
+  15: [{ title: 'What Is Professional Home Watch?', slug: '/guides/what-is-home-watch' }],
+  30: [{ title: 'What Is Professional Home Watch?', slug: '/guides/what-is-home-watch' }],
+  7:  [{ title: "The Seasonal Homeowner's Complete Guide", slug: '/guides/seasonal-homeowner-guide' }],
+  12: [{ title: "The Seasonal Homeowner's Complete Guide", slug: '/guides/seasonal-homeowner-guide' }],
+  24: [{ title: "The Seasonal Homeowner's Complete Guide", slug: '/guides/seasonal-homeowner-guide' }],
+  16: [{ title: 'Home Watch and Luxury Real Estate', slug: '/guides/home-watch-real-estate' }],
+  17: [{ title: 'Home Watch and Luxury Real Estate', slug: '/guides/home-watch-real-estate' }],
+  18: [{ title: 'Home Watch and Luxury Real Estate', slug: '/guides/home-watch-real-estate' }],
+  23: [
+    { title: "The Seasonal Homeowner's Complete Guide", slug: '/guides/seasonal-homeowner-guide' },
+    { title: 'Home Watch and Luxury Real Estate', slug: '/guides/home-watch-real-estate' },
+  ],
+}
+
 export default function ArticlePage() {
   const { slug } = useParams()
   const article = articles.find(a => a.slug === slug) || articles[0]
   const related = articles.filter(a => article.relatedIds?.includes(a.id))
+  const guides = guideMembership[article.id] || []
 
   return (
     <div className="bg-white min-h-screen">
@@ -33,8 +65,9 @@ export default function ArticlePage() {
 
       {/* Article Header */}
       <section className="max-w-4xl mx-auto px-6 pt-14 pb-8">
+
         {/* Back link and category row */}
-        <div className="flex items-center justify-between mb-10">
+        <div className="flex items-center justify-between mb-6">
           <Link
             to="/the-watch"
             className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-brand-blue transition-colors"
@@ -48,6 +81,24 @@ export default function ArticlePage() {
             {article.category}
           </span>
         </div>
+
+        {/* Part of Guide Band */}
+        {guides.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-8">
+            {guides.map(guide => (
+              <Link
+                key={guide.slug}
+                to={guide.slug}
+                className="inline-flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-600 hover:border-brand-blue hover:text-brand-blue transition-all duration-200 group"
+              >
+                <span className="text-xs">📖</span>
+                <span className="text-xs uppercase tracking-wider font-semibold text-gray-400 group-hover:text-brand-blue transition-colors">Part of</span>
+                <span className="font-semibold">{guide.title}</span>
+                <span className="text-brand-blue group-hover:translate-x-1 transition-transform duration-200">→</span>
+              </Link>
+            ))}
+          </div>
+        )}
 
         {/* Title */}
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
