@@ -8,6 +8,7 @@ import FAQ from './pages/FAQ'
 import TheWatch from './pages/TheWatch'
 import ArticlePage from './pages/ArticlePage'
 import Contact from './pages/Contact'
+import GuideArizonaClimate from './pages/GuideArizonaClimate'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -28,6 +29,7 @@ function App() {
         <Route path="the-watch" element={<><ScrollToTop /><TheWatch /></>} />
         <Route path="the-watch/:slug" element={<><ScrollToTop /><ArticlePage /></>} />
         <Route path="contact" element={<><ScrollToTop /><Contact /></>} />
+        <Route path="guides/arizona-climate-risks" element={<><ScrollToTop /><GuideArizonaClimate /></>} />
       </Route>
     </Routes>
   )
