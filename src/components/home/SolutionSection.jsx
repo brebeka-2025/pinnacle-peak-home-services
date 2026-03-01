@@ -1,7 +1,6 @@
 export default function SolutionSection() {
   const solutions = [
     {
-      number: "01",
       iconPath: "/Icons-01.png",
       title: "50+ Years Experience",
       description: "Unlike newer companies with just a few years under their belt, John brings five decades of home knowledge:",
@@ -13,7 +12,6 @@ export default function SolutionSection() {
       ]
     },
     {
-      number: "02",
       iconPath: "/Icons-02.png",
       title: "Local North Scottsdale Resident",
       description: "John lives in North Scottsdale and is part of your community:",
@@ -25,7 +23,6 @@ export default function SolutionSection() {
       ]
     },
     {
-      number: "03",
       iconPath: "/Icons-03.png",
       title: "Issue-Based Reporting",
       description: "We respect your time and inbox:",
@@ -61,11 +58,6 @@ export default function SolutionSection() {
                   alt="" 
                   className="w-20 h-20 object-contain"
                 />
-              </div>
-              
-              {/* Number */}
-              <div className="text-brand-gold text-5xl font-bold mb-4">
-                {solution.number}
               </div>
               
               {/* Title */}

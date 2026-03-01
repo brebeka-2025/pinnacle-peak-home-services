@@ -49,10 +49,10 @@ export default function PricingPreview() {
     <section className="bg-gradient-to-br from-brand-blue to-brand-blue-700 text-white py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
-          Simple, Transparent Pricing
+          Find the Right Package for Your Home
         </h2>
         <p className="text-xl text-center mb-12 max-w-3xl mx-auto">
-          Four packages designed for different needs. Schedule a consultation for customized pricing based on your property.
+          Four packages designed for different needs. Call us for a free consultation and we'll help you find the perfect fit.
         </p>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">

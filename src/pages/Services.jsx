@@ -164,9 +164,10 @@ export default function Services() {
         }}
       >
         <div className="max-w-4xl text-center relative z-10">
-          <h1 className="text-5xl font-bold mb-6">Simple, Transparent Pricing</h1>
+          <p className="text-brand-gold text-sm font-semibold tracking-widest uppercase mb-4">North Scottsdale Home Watch</p>
+          <h1 className="text-5xl font-bold mb-6">Find the Right Package for Your Home</h1>
           <p className="text-xl">
-            Four packages designed for different needs. No hidden fees. No fine print. Choose what works for you.
+            Four packages designed for different needs. Call us for a free consultation and we'll help you find the perfect fit.
           </p>
         </div>
       </section>
@@ -201,9 +202,10 @@ export default function Services() {
                 {/* Description - Fixed Height for 3 lines */}
                 <p className="text-sm text-gray-600 text-center mb-6 h-16 flex items-center justify-center px-2">{pkg.description}</p>
 
-                {/* Price - Fixed Height */}
+                {/* CTA in place of price - Fixed Height */}
                 <div className="text-center mb-2 h-20 flex flex-col items-center justify-center">
-                  <div className="text-4xl font-bold text-brand-gold">{pkg.price}</div>
+                  <div className="text-lg font-bold text-brand-blue">Let's Talk —</div>
+                  <div className="text-lg font-bold text-brand-gold mb-1">Get a Free Quote</div>
                   <div className="text-sm text-gray-600">{pkg.period}</div>
                 </div>
 
@@ -426,16 +428,16 @@ export default function Services() {
               <div key={idx} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-lg font-bold text-brand-blue flex-1">{addOn.service}</h3>
-                  <span className="text-brand-gold font-bold text-lg ml-4">{addOn.price}</span>
                 </div>
                 {addOn.note && <p className="text-sm text-gray-600">{addOn.note}</p>}
               </div>
             ))}
           </div>
+          <p className="text-center text-gray-600 mt-10">
+            Call or text us for pricing on any add-on service — <a href="/contact" className="text-brand-blue font-semibold hover:underline">get a free consultation</a>.
+          </p>
         </div>
       </section>
-
-      {/* CTA */}
       <section className="bg-gradient-to-br from-brand-blue to-brand-blue-700 text-white py-20 px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>

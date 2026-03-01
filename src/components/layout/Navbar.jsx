@@ -5,13 +5,17 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
 
-  const isActive = (path) => location.pathname === path
+  const isActive = (path) => {
+    if (path === '/') return location.pathname === '/'
+    return location.pathname.startsWith(path)
+  }
 
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/services', label: 'Services' },
     { path: '/about', label: 'About' },
     { path: '/faq', label: 'FAQ' },
+    { path: '/the-watch', label: 'The Watch' },
     { path: '/contact', label: 'Contact' },
   ]
 

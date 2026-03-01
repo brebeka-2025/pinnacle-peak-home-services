@@ -29,9 +29,11 @@ export default function Hero() {
             Get Free Consultation
           </Button>
           <Button variant="secondary" href="/services">
-            View Services & Pricing
+            View Services
           </Button>
         </div>
+
+
       </div>
     </section>
   )

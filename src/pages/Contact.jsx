@@ -50,6 +50,7 @@ export default function Contact() {
         }}
       >
         <div className="max-w-4xl mx-auto text-center relative z-10">
+          <p className="text-brand-gold text-sm font-semibold tracking-widest uppercase mb-4">Get In Touch</p>
           <h1 className="text-5xl font-bold mb-6">Let's Talk About Your Home</h1>
           <p className="text-xl mb-4">
             Get your free consultation today. No pressure, no obligation—just an honest conversation about protecting your most valuable asset.
@@ -65,7 +66,7 @@ export default function Contact() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             <div className="bg-white p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-shadow border-2 border-gray-200">
-              <div className="text-5xl mb-4">📱</div>
+              <div className="mb-4 flex justify-center"><img src="/phone-icon.jpg" alt="Phone" className="h-16 w-16 object-contain" /></div>
               <h3 className="text-2xl font-bold text-brand-blue mb-4">Call or Text</h3>
               <p className="text-gray-700 mb-4">Prefer to talk? Call or text me directly.</p>
               <a href="tel:4805551234" className="text-2xl font-bold text-brand-gold hover:underline">
@@ -77,7 +78,7 @@ export default function Contact() {
             </div>
 
             <div className="bg-white p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-shadow border-2 border-gray-200">
-              <div className="text-5xl mb-4">✉️</div>
+              <div className="mb-4 flex justify-center"><img src="/email-icon.jpg" alt="Email" className="h-16 w-16 object-contain" /></div>
               <h3 className="text-2xl font-bold text-brand-blue mb-4">Email</h3>
               <p className="text-gray-700 mb-4">Have a question? Email me directly.</p>
               <a
@@ -92,7 +93,7 @@ export default function Contact() {
             </div>
 
             <div className="bg-white p-8 rounded-xl text-center shadow-md hover:shadow-xl transition-shadow border-2 border-gray-200">
-              <div className="text-5xl mb-4">📋</div>
+              <div className="mb-4 flex justify-center"><img src="/form-icon.jpg" alt="Online Form" className="h-16 w-16 object-contain" /></div>
               <h3 className="text-2xl font-bold text-brand-blue mb-4">Online Form</h3>
               <p className="text-gray-700 mb-4">Fill out the consultation request form below.</p>
               <a href="#consultation-form" className="text-xl font-bold text-brand-gold hover:underline">
@@ -237,10 +238,10 @@ export default function Contact() {
                   className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-brand-gold focus:outline-none"
                 >
                   <option value="">Select a package (optional)...</option>
-                  <option value="monthly">Monthly ($250/month)</option>
-                  <option value="summer">Summer ($895 for 4 months)</option>
-                  <option value="seasonal">Seasonal ($1,395 for 6 months)</option>
-                  <option value="annual">Annual ($1,595 for 12 months)</option>
+                  <option value="monthly">Monthly</option>
+                  <option value="summer">Summer (4 months)</option>
+                  <option value="seasonal">Seasonal (6 months)</option>
+                  <option value="annual">Annual (12 months)</option>
                   <option value="not-sure">Not sure yet</option>
                 </select>
               </div>
@@ -297,23 +298,35 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16">What to Expect</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/10 p-8 rounded-xl backdrop-blur">
-              <h3 className="text-2xl font-bold mb-4">Within 24 Hours</h3>
-              <p className="text-lg">
-                I'll personally contact you to discuss your needs and answer any questions.
-              </p>
+            <div className="bg-white rounded-xl overflow-hidden">
+              <div className="bg-brand-gold px-6 py-4">
+                <h3 className="text-lg font-bold text-white text-center">Within 24 Hours</h3>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-700">
+                  I'll personally contact you to discuss your needs and answer any questions.
+                </p>
+              </div>
             </div>
-            <div className="bg-white/10 p-8 rounded-xl backdrop-blur">
-              <h3 className="text-2xl font-bold mb-4">Free Consultation</h3>
-              <p className="text-lg">
-                We'll have an honest conversation about your home and which approach makes sense for you.
-              </p>
+            <div className="bg-white rounded-xl overflow-hidden">
+              <div className="bg-brand-gold px-6 py-4">
+                <h3 className="text-lg font-bold text-white text-center">Free Consultation</h3>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-700">
+                  We'll have an honest conversation about your home and which approach makes sense for you.
+                </p>
+              </div>
             </div>
-            <div className="bg-white/10 p-8 rounded-xl backdrop-blur">
-              <h3 className="text-2xl font-bold mb-4">No Pressure</h3>
-              <p className="text-lg">
-                You're under no obligation. If I'm not the right fit, I'll tell you. If you're not ready, no problem.
-              </p>
+            <div className="bg-white rounded-xl overflow-hidden">
+              <div className="bg-brand-gold px-6 py-4">
+                <h3 className="text-lg font-bold text-white text-center">No Pressure</h3>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-700">
+                  You're under no obligation. If I'm not the right fit, I'll tell you. If you're not ready, no problem.
+                </p>
+              </div>
             </div>
           </div>
         </div>

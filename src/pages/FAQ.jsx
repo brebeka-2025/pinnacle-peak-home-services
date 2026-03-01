@@ -14,6 +14,7 @@ export default function FAQ() {
         }}
       >
         <div className="max-w-4xl mx-auto text-center relative z-10">
+          <p className="text-brand-gold text-sm font-semibold tracking-widest uppercase mb-4">Common Questions</p>
           <h1 className="text-5xl font-bold mb-6">Frequently Asked Questions</h1>
           <p className="text-xl">
             Everything you need to know about Pinnacle Peak Home Services. Click any question to see the answer.
@@ -219,10 +220,9 @@ export default function FAQ() {
               </ul>
             </Accordion>
 
-            <Accordion question="Are you licensed and insured?">
+            <Accordion question="Are you bonded and insured?">
               <p className="mb-4"><strong>Yes, fully.</strong></p>
               <ul className="list-disc ml-6 space-y-2">
-                <li>Licensed by the State of Arizona</li>
                 <li>General Liability Insurance ($1M coverage)</li>
                 <li>Bonded for your protection</li>
                 <li>NHWA Certified Professional</li>

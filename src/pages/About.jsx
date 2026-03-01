@@ -3,24 +3,80 @@ import Button from '../components/ui/Button'
 export default function About() {
   const values = [
     {
-      icon: '🛡️',
+      icon: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-14 h-14">
+          {/* Shield outer */}
+          <path d="M32 4L8 14V32C8 46 18 57 32 60C46 57 56 46 56 32V14L32 4Z" fill="#dbeafe" stroke="#1E5BA8" strokeWidth="2.5" strokeLinejoin="round" />
+          {/* Shield inner panel */}
+          <path d="M32 11L15 19V32C15 43 22 51.5 32 54.5C42 51.5 49 43 49 32V19L32 11Z" fill="white" stroke="#1E5BA8" strokeWidth="1.5" strokeLinejoin="round" />
+          {/* Gold accent band */}
+          <path d="M32 11L15 19V22L49 22V19L32 11Z" fill="#c48b47" opacity="0.85" />
+          {/* Checkmark circle */}
+          <circle cx="32" cy="35" r="10" fill="#1E5BA8" />
+          {/* Checkmark */}
+          <path d="M26 35L30 39L38 30" stroke="#c48b47" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      ),
       title: 'Integrity',
       description: 'We report exactly what we find — every issue, every visit. No sugarcoating, no surprises.'
     },
     {
-      icon: '🔒',
+      icon: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-14 h-14">
+          {/* Lock body */}
+          <rect x="12" y="28" width="40" height="28" rx="5" fill="#dbeafe" stroke="#1E5BA8" strokeWidth="2.5" />
+          {/* Lock body inner highlight */}
+          <rect x="17" y="33" width="30" height="18" rx="3" fill="white" stroke="#1E5BA8" strokeWidth="1" />
+          {/* Gold top bar */}
+          <rect x="12" y="28" width="40" height="8" rx="3" fill="#c48b47" />
+          {/* Shackle */}
+          <path d="M22 28V21C22 13.5 42 13.5 42 21V28" stroke="#1E5BA8" strokeWidth="3" strokeLinecap="round" fill="none" />
+          {/* Keyhole circle */}
+          <circle cx="32" cy="43" r="5" fill="#1E5BA8" />
+          {/* Keyhole stem */}
+          <rect x="30.5" y="44" width="3" height="5" rx="1" fill="#c48b47" />
+        </svg>
+      ),
       title: 'Discretion',
       description: 'Your home, your privacy, and your schedule are handled with complete confidentiality.'
     },
     {
-      icon: '🎯',
+      icon: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-14 h-14">
+          {/* Outer ring */}
+          <circle cx="32" cy="32" r="27" fill="#dbeafe" stroke="#1E5BA8" strokeWidth="2.5" />
+          {/* Mid ring */}
+          <circle cx="32" cy="32" r="19" fill="white" stroke="#1E5BA8" strokeWidth="2" />
+          {/* Inner ring */}
+          <circle cx="32" cy="32" r="11" fill="#dbeafe" stroke="#c48b47" strokeWidth="2" />
+          {/* Bullseye */}
+          <circle cx="32" cy="32" r="5" fill="#c48b47" />
+          {/* Arrow shaft */}
+          <line x1="50" y1="14" x2="36" y2="28" stroke="#1E5BA8" strokeWidth="2.5" strokeLinecap="round" />
+          {/* Arrow head */}
+          <path d="M50 14L43 14L50 21Z" fill="#1E5BA8" />
+        </svg>
+      ),
       title: 'Reliability',
       description: 'The same professional, every single visit. No rotating staff, no strangers in your home.'
     },
     {
-      icon: '📍',
+      icon: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-14 h-14">
+          {/* Pin outer circle */}
+          <circle cx="32" cy="24" r="17" fill="#dbeafe" stroke="#1E5BA8" strokeWidth="2.5" />
+          {/* Pin inner circle */}
+          <circle cx="32" cy="24" r="10" fill="white" stroke="#1E5BA8" strokeWidth="1.5" />
+          {/* Pin center dot */}
+          <circle cx="32" cy="24" r="5" fill="#c48b47" />
+          {/* Pin tail */}
+          <path d="M22 37C22 37 28 44 32 56C36 44 42 37 42 37" fill="#1E5BA8" stroke="#1E5BA8" strokeWidth="1.5" strokeLinejoin="round" />
+          {/* Ground line */}
+          <line x1="22" y1="60" x2="42" y2="60" stroke="#c48b47" strokeWidth="2.5" strokeLinecap="round" />
+        </svg>
+      ),
       title: 'Local Expertise',
-      description: 'We live here. We know North Scottsdale\'s climate, communities, and seasonal challenges intimately.'
+      description: "We live here. We know North Scottsdale's climate, communities, and seasonal challenges intimately."
     }
   ]
 
@@ -185,7 +241,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, idx) => (
               <div key={idx} className="bg-white rounded-xl p-8 text-center border-2 border-gray-200 hover:border-brand-blue hover:-translate-y-1 transition-all duration-300">
-                <div className="text-5xl mb-4">{value.icon}</div>
+                <div className="flex justify-center mb-4">{value.icon}</div>
                 <h3 className="text-xl font-bold text-brand-blue mb-3">{value.title}</h3>
                 <p className="text-gray-600 text-sm">{value.description}</p>
               </div>
@@ -276,7 +332,7 @@ export default function About() {
       <section className="py-20 px-6 bg-brand-blue text-white">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-brand-gold font-semibold uppercase tracking-widest text-sm mb-4">Credentials & Trust</p>
-          <h2 className="text-4xl font-bold mb-6">Certified, Licensed & Committed</h2>
+          <h2 className="text-4xl font-bold mb-6">Certified, Bonded & Committed</h2>
           <p className="text-xl text-gray-300 mb-16 max-w-3xl mx-auto">
             When you invite someone into your home, credentials matter. Here's what backs every visit we make.
           </p>
@@ -284,7 +340,7 @@ export default function About() {
             {[
               { title: 'Veteran Owned & Operated', desc: 'Founded and operated by a U.S. military veteran' },
               { title: 'SBA Certified', desc: 'Service-Disabled Veteran-Owned Small Business' },
-              { title: 'Licensed & Insured', desc: 'Fully licensed, insured, and bonded for your protection' },
+              { title: 'Bonded & Insured', desc: 'Fully bonded and insured for your protection' },
               { title: 'Local Resident', desc: 'North Scottsdale resident — we live in the communities we serve' }
             ].map((cred, idx) => (
               <div key={idx} className="bg-white rounded-xl overflow-hidden shadow-md">
