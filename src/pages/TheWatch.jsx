@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import articles from '../data/articles'
 
 const categories = [
   'All',
@@ -10,86 +11,6 @@ const categories = [
   'Security',
   'Travel Tips',
   'How to Work with a Home Watch Company',
-]
-
-const articles = [
-  {
-    id: 1,
-    slug: 'what-happens-to-your-home-in-arizona-summer',
-    category: 'Seasonal Tips',
-    title: 'What Really Happens to Your North Scottsdale Home During an Arizona Summer',
-    excerpt: 'Most homeowners don\'t realize the damage that 115-degree heat, monsoon storms, and humidity spikes can cause to a vacant property. Here\'s what to watch for — and how to prevent it.',
-    date: 'February 20, 2026',
-    readTime: '6 min read',
-    image: '/watch-article-1.jpg',
-    featured: true,
-  },
-  {
-    id: 2,
-    slug: 'insurance-vacancy-clause',
-    category: 'Insurance & Legal',
-    title: 'The Vacancy Clause Your Insurance Policy Has — And Why It Matters',
-    excerpt: 'Most homeowner policies have a clause that voids coverage after 30–60 days of vacancy. Learn what it means, how to find it in your policy, and what home watch services can do to protect you.',
-    date: 'February 14, 2026',
-    readTime: '5 min read',
-    image: '/watch-article-2.jpg',
-    featured: false,
-  },
-  {
-    id: 3,
-    slug: 'monsoon-season-prep',
-    category: 'Storm & Weather',
-    title: 'Monsoon Season in Scottsdale: How to Prepare Your Home Before You Leave',
-    excerpt: 'Arizona monsoon season runs June through September and brings high winds, flash flooding, and dramatic temperature swings. Here\'s your complete pre-departure checklist.',
-    date: 'February 8, 2026',
-    readTime: '7 min read',
-    image: '/watch-article-3.jpg',
-    featured: false,
-  },
-  {
-    id: 4,
-    slug: 'home-watch-vs-neighbor-check',
-    category: 'How to Work with a Home Watch Company',
-    title: 'Why Asking Your Neighbor to Check on Your Home Isn\'t Enough',
-    excerpt: 'Neighbors are wonderful — but they\'re not trained to spot a failing water heater, pest infestation, or HVAC issue. Here\'s the difference between a friendly check-in and a professional home watch visit.',
-    date: 'February 1, 2026',
-    readTime: '4 min read',
-    image: '/watch-article-4.jpg',
-    featured: false,
-  },
-  {
-    id: 5,
-    slug: 'security-while-traveling',
-    category: 'Security',
-    title: '8 Ways to Make Your Vacant Home Look Occupied While You Travel',
-    excerpt: 'An empty home is an invitation. These practical, low-cost strategies — combined with regular professional visits — are the most effective deterrents against break-ins and vandalism.',
-    date: 'January 24, 2026',
-    readTime: '5 min read',
-    image: '/watch-article-5.jpg',
-    featured: false,
-  },
-  {
-    id: 6,
-    slug: 'pre-arrival-home-prep',
-    category: 'Travel Tips',
-    title: 'How to Arrive Home to a House That\'s Ready for You',
-    excerpt: 'There\'s nothing worse than returning from a long trip to a warm, stuffy house with an empty fridge and a stack of packages outside. Pre-arrival home prep changes everything.',
-    date: 'January 17, 2026',
-    readTime: '4 min read',
-    image: '/watch-article-6.jpg',
-    featured: false,
-  },
-  {
-    id: 7,
-    slug: 'hvac-vacant-home',
-    category: 'Home Maintenance',
-    title: 'What Temperature Should You Set Your Thermostat When Your Home Is Empty?',
-    excerpt: 'Too low and you\'re wasting money. Too high and you risk warped wood, mold, and appliance failures. Here\'s what the experts — and your HVAC manufacturer — actually recommend.',
-    date: 'January 10, 2026',
-    readTime: '5 min read',
-    image: '/watch-article-7.jpg',
-    featured: false,
-  },
 ]
 
 const categoryColors = {
