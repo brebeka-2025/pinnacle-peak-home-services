@@ -31,6 +31,7 @@ const guides = [
     articleCount: 7,
     slug: '/guides/arizona-climate-risks',
     category: 'Storm & Weather',
+    image: '/watch-article-25.jpg',
     available: true,
   },
   {
@@ -40,7 +41,8 @@ const guides = [
     articleCount: 5,
     slug: '/guides/homeowners-insurance-vacant-homes',
     category: 'Insurance & Legal',
-    available: false,
+    image: '/watch-article-19.jpg',
+    available: true,
   },
   {
     id: 3,
@@ -49,7 +51,8 @@ const guides = [
     articleCount: 5,
     slug: '/guides/what-is-home-watch',
     category: 'How to Work with a Home Watch Company',
-    available: false,
+    image: '/watch-article-9.jpg',
+    available: true,
   },
   {
     id: 4,
@@ -58,7 +61,8 @@ const guides = [
     articleCount: 4,
     slug: '/guides/seasonal-homeowner-guide',
     category: 'Seasonal Tips',
-    available: false,
+    image: '/watch-article-24.jpg',
+    available: true,
   },
   {
     id: 5,
@@ -67,7 +71,8 @@ const guides = [
     articleCount: 4,
     slug: '/guides/home-watch-real-estate',
     category: 'How to Work with a Home Watch Company',
-    available: false,
+    image: '/watch-article-17.jpg',
+    available: true,
   },
 ]
 
@@ -186,49 +191,60 @@ export default function TheWatch() {
         </div>
       </section>
 
-      {/* Guides Grid */}
+      {/* Guides List */}
       {showGuides && (
-        <section className="max-w-7xl mx-auto px-6 py-10">
-          <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-2">Complete Guides</p>
-          <p className="text-gray-500 text-sm mb-8">In-depth topic guides that cover everything you need to know — with links to every related article.</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="max-w-4xl mx-auto px-6 py-10">
+          <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-3">Complete Guides</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-3">In-Depth Guides for North Scottsdale Homeowners</h2>
+          <p className="text-gray-500 text-lg mb-10">Everything you need to know about protecting your property — organized by topic, with links to every related article.</p>
+          <div className="space-y-6">
             {guides.map(guide => (
-              <div key={guide.id} className="relative flex flex-col rounded-xl overflow-hidden border border-gray-100 shadow-sm">
-                {/* Category color bar */}
-                <div
-                  className="h-1.5 w-full"
-                  style={{ backgroundColor: categoryColors[guide.category] || '#1E5BA8' }}
-                />
-                <div className="flex flex-col flex-grow p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span
-                      className="text-xs font-bold uppercase tracking-wider"
-                      style={{ color: categoryColors[guide.category] || '#1E5BA8' }}
-                    >
-                      {guide.category}
-                    </span>
-                    <span className="text-xs text-gray-400 font-medium">
-                      {guide.articleCount} articles
-                    </span>
+              <div
+                key={guide.id}
+                className="flex rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 bg-white"
+              >
+                {/* Left — Image 1/3 */}
+                <div className="w-1/3 flex-shrink-0 bg-gray-100 min-h-[200px] overflow-hidden">
+                  <img
+                    src={guide.image}
+                    alt={guide.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Right — Copy 2/3 */}
+                <div className="flex flex-col justify-between p-7 flex-grow">
+                  <div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-xs font-bold uppercase tracking-widest text-gray-400">
+                        Complete Guide
+                      </span>
+                      <span className="text-gray-200">|</span>
+                      <span className="text-xs text-gray-400 font-medium">
+                        {guide.articleCount} articles
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 leading-snug mb-3">
+                      {guide.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 leading-relaxed">
+                      {guide.description}
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 leading-snug mb-3">
-                    {guide.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed flex-grow mb-6">
-                    {guide.description}
-                  </p>
-                  {guide.available ? (
-                    <Link
-                      to={guide.slug}
-                      className="inline-flex items-center gap-2 text-brand-blue font-semibold text-sm hover:gap-4 transition-all duration-200"
-                    >
-                      Read guide <span>→</span>
-                    </Link>
-                  ) : (
-                    <span className="inline-flex items-center gap-2 text-gray-300 font-semibold text-sm cursor-default">
-                      Coming soon
-                    </span>
-                  )}
+                  <div className="mt-5">
+                    {guide.available ? (
+                      <Link
+                        to={guide.slug}
+                        className="inline-flex items-center gap-2 text-brand-blue font-semibold text-sm hover:gap-4 transition-all duration-200"
+                      >
+                        Read guide <span>→</span>
+                      </Link>
+                    ) : (
+                      <span className="inline-flex items-center gap-2 text-gray-300 font-semibold text-sm cursor-default">
+                        Coming soon
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
