@@ -36,7 +36,7 @@ function App() {
         <Route path="guides/arizona-climate-risks" element={<><ScrollToTop /><GuideArizonaClimate /></>} />
         <Route path="guides/homeowners-insurance-vacant-homes" element={<><ScrollToTop /><GuideInsurance /></>} />
         <Route path="guides/what-is-home-watch" element={<><ScrollToTop /><GuideWhatIsHomeWatch /></>} />
-        <Route path="guides/seasonal-homeowner" element={<><ScrollToTop /><GuideSeasonalHomeowner /></>} />
+        <Route path="guides/seasonal-homeowner-guide" element={<><ScrollToTop /><GuideSeasonalHomeowner /></>} />
         <Route path="guides/home-watch-real-estate" element={<><ScrollToTop /><GuideRealEstate /></>} />
       </Route>
     </Routes>
