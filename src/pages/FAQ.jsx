@@ -32,22 +32,22 @@ export default function FAQ() {
             
             <Accordion question="How much does your service cost?">
               <p className="mb-4">
-                We offer four packages designed for different needs:
+                Every North Scottsdale property is unique, and pricing is customized based on your specific needs. Factors that shape your quote include:
               </p>
               <ul className="list-disc ml-6 space-y-2 mb-4">
-                <li><strong>Monthly:</strong> $250/month - Perfect for short trips</li>
-                <li><strong>Summer:</strong> $895 (4 months) - Save 11% vs monthly</li>
-                <li><strong>Seasonal:</strong> $1,395 (6 months) - Save 22% vs monthly</li>
-                <li><strong>Annual:</strong> $1,595 (12 months) - Save 47% vs monthly</li>
+                <li>Property size and complexity</li>
+                <li>Visit frequency and duration of service</li>
+                <li>Special requirements (pool, guest house, irrigation, etc.)</li>
+                <li>Your travel schedule and any add-on services</li>
               </ul>
               <p>
-                All packages include weekly visits, 24/7 availability, and issue-based photo reporting. View our <a href="/services" className="text-brand-blue underline">Services page</a> for complete details.
+                As an NHWA Certified professional, I provide customized quotes following a complimentary property walkthrough — ensuring you only pay for exactly what your home needs. <a href="/contact" className="text-brand-blue underline">Contact me</a> to schedule your free, no-obligation consultation.
               </p>
             </Accordion>
 
             <Accordion question="Are there any hidden fees?">
               <p className="mb-4">
-                <strong>No.</strong> The price you see is what you pay. All packages include:
+                <strong>No.</strong> Your quoted price is exactly what you pay. All service agreements include:
               </p>
               <ul className="list-disc ml-6 space-y-2">
                 <li>Weekly visits with comprehensive inspections</li>
@@ -272,19 +272,19 @@ export default function FAQ() {
                 <li>Small issues caught early = big savings</li>
               </ul>
               <p className="mt-4">
-                The Monthly package ($250) is perfect for occasional travelers who want peace of mind without long-term commitment.
+                The Monthly package is perfect for occasional travelers who want peace of mind without a long-term commitment.
               </p>
             </Accordion>
 
             <Accordion question="We're snowbirds (gone 6 months). Which package is best?">
               <p className="mb-4">
-                The Seasonal package ($1,395 for 6 months) is designed specifically for snowbirds:
+                The Seasonal package is designed specifically for snowbirds:
               </p>
               <ul className="list-disc ml-6 space-y-2">
                 <li>26 weekly visits throughout your absence</li>
                 <li>FREE pre-arrival home prep (AC on, lights set, etc.)</li>
                 <li>FREE storm/monsoon services</li>
-                <li>Save 22% vs paying monthly</li>
+                <li>Significant savings compared to month-to-month service</li>
               </ul>
               <p className="mt-4">
                 Most of my snowbird clients use November-April coverage, but I customize the dates to your exact schedule.
@@ -293,12 +293,12 @@ export default function FAQ() {
 
             <Accordion question="I travel frequently for work (100-200 days/year). What do you recommend?">
               <p className="mb-4">
-                The Annual package ($1,595) is perfect for frequent business travelers:
+                The Annual package is perfect for frequent business travelers:
               </p>
               <ul className="list-disc ml-6 space-y-2">
                 <li>Year-round weekly visits whether you're home or away</li>
                 <li>UNLIMITED contractor coordination at no extra charge</li>
-                <li>Save 47% vs monthly pricing</li>
+                <li>Best value for homeowners with demanding travel schedules</li>
                 <li>No need to turn service on/off as your schedule changes</li>
               </ul>
               <p className="mt-4">
