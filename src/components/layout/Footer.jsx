@@ -1,13 +1,15 @@
+import { Link } from 'react-router-dom'
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
 
           {/* Column 1 - Brand */}
-          <div>
+          <div className="md:col-span-1">
             <img 
               src="/PPHS_Logo.jpg" 
               alt="Pinnacle Peak Home Services" 
@@ -25,31 +27,64 @@ export default function Footer() {
           </div>
 
           {/* Column 2 - Navigation */}
-          <div>
-            <h4 className="text-white font-bold text-lg mb-6 tracking-wide">Navigation</h4>
+          <div className="md:pl-8">
+            <h4 className="text-white font-bold text-sm mb-5 tracking-widest uppercase">Navigation</h4>
             <ul className="space-y-3">
-              <li><a href="/" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
-              <li><a href="/services" className="text-gray-400 hover:text-white transition-colors">Services</a></li>
-              <li><a href="/about" className="text-gray-400 hover:text-white transition-colors">About</a></li>
-              <li><a href="/faq" className="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
-              <li><a href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li><Link to="/" className="text-gray-400 hover:text-white transition-colors text-sm">Home</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors text-sm">Services</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors text-sm">About</Link></li>
+              <li><Link to="/faq" className="text-gray-400 hover:text-white transition-colors text-sm">FAQ</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">Contact</Link></li>
+              <li><Link to="/the-watch" className="text-gray-400 hover:text-white transition-colors text-sm">The Watch</Link></li>
             </ul>
           </div>
 
-          {/* Column 3 - Company */}
+          {/* Column 3 - Guides */}
           <div>
-            <h4 className="text-white font-bold text-lg mb-6 tracking-wide">Company</h4>
+            <h4 className="text-white font-bold text-sm mb-5 tracking-widest uppercase">Guides</h4>
             <ul className="space-y-3">
-              <li><a href="/about" className="text-gray-400 hover:text-white transition-colors">Our Story</a></li>
-              <li><a href="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="/terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+              <li>
+                <Link to="/guides/arizona-climate-risks" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Arizona Climate Risks
+                </Link>
+              </li>
+              <li>
+                <Link to="/guides/homeowners-insurance-vacant-homes" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Insurance & Vacant Homes
+                </Link>
+              </li>
+              <li>
+                <Link to="/guides/what-is-home-watch" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  What Is Home Watch?
+                </Link>
+              </li>
+              <li>
+                <Link to="/guides/seasonal-homeowner-guide" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Seasonal Homeowner Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/guides/home-watch-real-estate" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Home Watch & Real Estate
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Column 4 - Social & Badges */}
+          {/* Column 4 - Company */}
           <div>
-            <h4 className="text-white font-bold text-lg mb-6 tracking-wide">Follow Us</h4>
+            <h4 className="text-white font-bold text-sm mb-5 tracking-widest uppercase">Company</h4>
+            <ul className="space-y-3">
+              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors text-sm">Our Story</Link></li>
+              <li><Link to="/the-watch" className="text-gray-400 hover:text-white transition-colors text-sm">The Watch</Link></li>
+              <li><a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a></li>
+              <li><a href="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a></li>
+            </ul>
+          </div>
+
+          {/* Column 5 - Social & Badges */}
+          <div>
+            <h4 className="text-white font-bold text-sm mb-5 tracking-widest uppercase">Follow Us</h4>
             <div className="flex gap-4 mb-8">
               {/* Facebook */}
               <a href="#" className="bg-gray-800 hover:bg-brand-blue transition-colors p-3 rounded-lg">
